@@ -2,7 +2,11 @@ import os
 
 os.system("clear")
 
-numero = 0
+numero: float = -1;
 
-numero = int(input("Digite um numero"))
+while numero < 0 or numero > 10:
+    numero =float(input("Digite um numero"));
+    os.system("clear")
 
+print(f"numero informado:{numero}")
+    
