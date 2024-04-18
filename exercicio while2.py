@@ -17,6 +17,7 @@ for i in range(1,4):
     media = soma / 3 
 
     print(f"A media do aluno foi: {media}")
+    
     if media >= 7:
        print("O aluno esta aprovado")
 
