@@ -6,3 +6,10 @@ import os
 os.system("clear")
 
 
+altura = float(input("Digite uma altura:"))
+largura = float(input("Digite uma largura:"))
+
+area = largura*altura
+
+print(f"A area da parede foi: {area} quadrados")
+print(f"A quantidade de tinta necessaria e: {area/2} litros")
