@@ -8,6 +8,8 @@ mediageral = 0
 somageral = 0
 mediapares = 0 
 somapares = 0
+contadorpositivo = 0
+contadornegativo = 0
 mediaimpares = 0
 somaimpares = 0
 qtdpares = 0
@@ -18,35 +20,40 @@ maiornumero = 0
 menornumero =9999
 contadorpar = 0 
 contadorimpar = 0
-numeros = []
-numeros :float
+num = []
+numeros =0
+contadorgeral=0
 
 for i in range (QTDNUMEROS):
     
-    numeros = input("Digite um numero:")
-    contador +=1
-    somageral += 1
-    mediageral = somageral / contador
+    contadorgeral +=1
+    numero = int(input("Digite um numero:"))
+    somageral += numero
+
+    num.append(numero)
 
     if numeros > 0:
         qtdpositivo += 1
+        contadorpositivo +=1
     if numeros < 0:
         qtdnegativo +=1
+        contadornegativo +=1
     if numeros  %2 == 0:
         qtdpares += 1
-        somapares += numeros
+        somapares += num[i]
         contadorpar += 1
     else:
         qtdimpares += 1
-        somaimpares += numeros
+        somaimpares += num[i]
         contadorimpar += 1
     if numeros > maiornumero:
-        maiornumero = numeros[i]
+        maiornumero = num[i]
     if numeros > menornumero:
-     menornumero = numeros[i]
+        menornumero = num[i]
 
-    mediapares = somapares/contadorpar
-    mediaimpares = somaimpares/contadorimpar
+mediapares = somapares/contadorpar
+mediaimpares = somaimpares/qtdimpares
+mediageral = somageral / contadorgeral
     
 print(f"A quantidade de valores apresentados e : {QTDNUMEROS}")
 print(f"A quantidade de valores positivos e : {qtdpositivo}")
